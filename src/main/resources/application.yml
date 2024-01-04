@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /auth
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    health:
+      show-details: always
+  endpoint:
+    metrics:
+      enabled: true
+
+  cloud:
+    compatibility-verifier:
+      enabled: false
